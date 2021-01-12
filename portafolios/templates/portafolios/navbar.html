@@ -15,7 +15,7 @@
     <nav class="navigation-bar">
         
         <img src= "{% static 'img/logo.png' %}" alt="logo" class="logo">
-        <div class="nav-menu">
+        
         <ul>
             <strong><li><a  href="{% url 'contacts' %}" class=item>Contacts</a></li></strong>
             <strong> <li><a href="{% url 'my_recent_work' %}"class=item>Recent Work</a></li></strong>
@@ -23,7 +23,7 @@
             <strong><li><a href="{% url 'home' %}" class=item >Home</a></li></strong>
 
         </ul>
-    </div>
+    
     </nav>
     
     {% endblock navbar %}

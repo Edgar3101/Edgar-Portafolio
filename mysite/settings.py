@@ -128,10 +128,3 @@ STATICFILES_DIRS=[
 MEDIA_ROOT= os.path.join(BASE_DIR, 'static/img')
 STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
-DEFAULT_FROM_EMAIL = 'edgar.hernandez3101@gmail.com'
-EMAIL_HOST = 'smtp.sendgrid.net' # new
-EMAIL_HOST_USER = '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' # new
-EMAIL_HOST_PASSWORD = 'Saintseiya12' # new
-EMAIL_PORT = 465 # new
-EMAIL_USE_TLS = True

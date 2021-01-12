@@ -159,33 +159,3 @@ a{
     transform: scale(1.1);
     transition: 0.7s;
 }
-@media (max-width: 700px) {
-    h1{
-        color: rgb(247, 22, 247);
-    }
-    .navigation-bar{
-        background-color: rgb(32, 124, 245);
-    }
-    
-    li{
-        
-        float: none;
-        display: block;
-        margin: 10% 10px;
-        
-    }
-    .logo{
-        display: none;
-    }
-   
-    .navigation-bar{
-        height: 300px;
-        
-    }
-    .item{
-       
-        color: black;
-        border: none;
-    }
-    
-}
