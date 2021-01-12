@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+{% block navbar %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    
+    <title>Edgar | Portafolio</title>
+</head>
+<body>
+    <nav class="navigation-bar">
+        
+        <img src= "{% static 'img/logo.png' %}" alt="logo" class="logo">
+        <div class="nav-menu">
+        <ul>
+            <strong><li><a  href="{% url 'contacts' %}" class=item>Contacts</a></li></strong>
+            <strong> <li><a href="{% url 'my_recent_work' %}"class=item>Recent Work</a></li></strong>
+            <strong><li><a href="{% url 'about_me' %}" class=item>About me</a></li></strong>
+            <strong><li><a href="{% url 'home' %}" class=item >Home</a></li></strong>
+
+        </ul>
+    </div>
+    </nav>
+    
+    {% endblock navbar %}
+</body>
+
+</html>

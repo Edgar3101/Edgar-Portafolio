@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgar | Portafolio</title>
+</head>
+<body>
+    {% include 'portafolios/navbar.html' %}
+         {% endblock %}
+    <div class= "container">
+        <div>
+        <p class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta impedit, asperiores non libero numquam tempora sequi labore molestiae officia cumque nam esse amet, consequatur veritatis et saepe excepturi sit nihil!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium cumque quis repellendus itaque eveniet officia aspernatur reprehenderit tempora voluptatum voluptatem earum minus odio dolores quae placeat, esse similique possimus adipisci.
+        </p>
+           <div class="subcontainer">
+            <strong><a href="{% url 'my_recent_work' %}" class="btn">Ver mas</a></strong>
+           </div> 
+        </div>
+        <div >
+            <img src="{% static 'img/student-849825_1920.jpg' %}" alt="image" class="image1">
+        </div>
+        
+
+    </div>
+    <hr>
+    <div class="father">
+    <div class="section-2">
+            <div><img src="{% static 'img/coffee-5132832_1920.jpg' %}"  class="photo2"></div>
+
+    </div>
+    <div class="Text2">
+        <p class="texT3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aspernatur quibusdam distinctio ipsum quis. Beatae molestias ex dolor in cum ut accusamus qui consequatur eos. Modi fugiat aperiam vero sint!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci neque voluptate asperiores maxime sapiente dolores et, sint voluptas dolore assumenda sit cum iste nihil architecto nesciunt, sunt vel aliquam! Nemo!</p>
+
+    </div>
+    </div>
+    <div class="contacts-2">
+        {% for k in social_media_views %}
+        <a href="{{ k.facebook }}" class="fab fa-facebook fa-8x" id="logo-social2"></a>
+        <a href="{{ k.twitter }}" class="fab fa-twitter fa-8x" id="logo-social2"></a>
+        <a href="{{ k.instagram }}" class="fab fa-instagram fa-8x" id="logo-social2"></a>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

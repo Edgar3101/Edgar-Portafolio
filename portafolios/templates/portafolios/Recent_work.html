@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgar | Portafolio</title>
+</head>
+<body>
+    {% include 'portafolios/navbar.html' %}
+         {% endblock %}
+         <h1>These are my recent works</h1>
+         <h3>This are my recents works</h3>
+         <div class="caution">
+             <h3 class="showcase">This are some projects that i'm working right now.</h3>
+             <i class="far fa-hand-point-down fa-5x" id="finger1" href="#"></i>
+
+         </div>
+         <div class="section-work">
+            {% for i in my_work_views %}
+            <div><img src="{{ i.work_photo1.url }}" alt="" class="image-work"></div> 
+            <div><img src="{{ i.work_photo2.url }}" alt="" class="image-work"></div>
+           <div><p class="words-work">{{ i.work_text1 }}</p></div>
+            <div><p class="words-work">{{ i.work_text2 }}</p></div>
+            <div><img src="{{ i.work_photo3.url }}" alt="" class="image-work"></div>
+            <div><img src="{{ i.work_photo4.url }}" alt="" class="image-work"></div>
+            <div><p class="words-work">{{ i.work_text3 }}</p></div>
+            <div><p class="words-work">{{ i.work_text4 }}</p></div>
+            {% endfor %}
+        </div> 
+        <div class="social-container2">
+            <a href="#" class="fab fa-facebook fa-8x" id="logo-social4"></a>
+            <a href="#" class="fab fa-twitter fa-8x" id="logo-social4"></a>
+            <a href="#" class="fab fa-instagram fa-8x" id="logo-social4"></a>
+           </div>
+</body>
+</html>

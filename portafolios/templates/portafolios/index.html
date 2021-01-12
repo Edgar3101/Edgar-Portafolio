@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    
+    <title>Edgar | Portafolio </title>
+</head>
+<body>
+    <div class="container">
+        {% include 'portafolios/navbar.html' %}
+	     {% endblock %}
+        <div class="principal">
+
+            <h1 class="title">{{ home_view.0.title }}</h1>
+            <h3 class="subtitle">{{ home_view.0.subtitle }}</h3>
+            {% for i in home_view %}
+            <img src="{{ i.logo_home.url }}" alt= "logo1" class="logo1">
+            {% endfor %}
+            
+
+        </div>
+    </div>
+    <div class="section2">
+        <h2 class="title2">HI, I'm {{ home_view.0.profession }}, let me tell you about me...</h2>
+        <p class="quote"> {{ home_view.0.who_i_am }}  </p>
+            <nav>
+            <i class="far fa-hand-point-down fa-5x" id="finger" href="#"></i>
+            </nav> 
+    </div>
+    <div class="section3">
+     <i class="fas fa-laptop-code fa-6x" id="logos"></i>
+     
+     <i class="fas fa-cogs fa-6x" id="logos"></i>
+     <i class="fas fa-glasses fa-6x" id="logos"></i>
+     <p class="Description">{{ home_view.0.text_for_backend }}</p>
+     <p class="Description">{{ home_view.0.text_for_front_end }}</p>
+     <p class="Description">{{ home_view.0.text_for_appsdesktop }}</P>
+    </div>
+    <div class="section-4">
+        <h1 class="title">Why i'm using Django?</h1>
+      <div class="gallery">
+        {% for j in secondary_views %}
+        <div><img src="{{ j.photo1.url }}" alt="" class="images"></div>
+        
+        
+        <div><img src="{{ j.photo2.url }}" alt="" class="images"></div>
+        <div><img src="{{ j.hoto3.url }}" alt="" class="images"></div>
+        {% endfor %}
+        <div class="Description1">{{ secondary_views.0.text1 }}</div>
+        <div class="Description1">{{ secondary_views.0.text2 }}</div>
+        <div class="Description1">{{ secondary_views.0.text3 }}</div>
+        
+    </div>
+    <div class="blue-color">
+        
+    </div>
+       
+    </div>
+    <div class="Section-6">
+        {% for k in social_media_views %}
+        <a href="{{ k.facebook }}" class="fab fa-facebook fa-8x" id="logo-social"></a>
+        <a href="{{ k.twitter }}" class="fab fa-twitter fa-8x" id="logo-social"></a>
+        <a href="{{ k.instagram }}" class="fab fa-instagram fa-8x" id="logo-social"></a>
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>

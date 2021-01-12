@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    
+    <title>Edgar | Portafolio</title>
+
+</head>
+<body>
+    {% include 'portafolios/navbar.html' %}
+         {% endblock %}
+         <div class="section-1">
+             <h1>
+                 All my designs are customizable!
+             </h1>
+             <p>
+                 If you want a page and you want new elements that you not see here
+                 you can ask me, and I'll do for you
+             </p>
+        </div>
+
+          <div class="social-container">
+             <a href="#" class="fab fa-facebook fa-8x" id="logo-social4"></a>
+             <a href="#" class="fab fa-twitter fa-8x" id="logo-social4"></a>
+             <a href="#" class="fab fa-instagram fa-8x" id="logo-social4"></a>
+            </div>
+</body>
+</html>
