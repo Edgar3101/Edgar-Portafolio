@@ -25,11 +25,12 @@
                  you can ask me, and I'll do for you
              </p>
         </div>
-
+        {% for k in social_media_views %}
           <div class="social-container">
-             <a href="#" class="fab fa-facebook fa-8x" id="logo-social4"></a>
-             <a href="#" class="fab fa-twitter fa-8x" id="logo-social4"></a>
-             <a href="#" class="fab fa-instagram fa-8x" id="logo-social4"></a>
+             <a href="{{ k.facebook }}" class="fab fa-facebook fa-8x" id="logo-social4"></a>
+             <a href="{{ k.twitter }}" class="fab fa-twitter fa-8x" id="logo-social4"></a>
+             <a href="{{ k.instagram }}" class="fab fa-instagram fa-8x" id="logo-social4"></a>
             </div>
+            {% endfor %}
 </body>
 </html>
